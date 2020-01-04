@@ -3,7 +3,7 @@ layout: mypost
 title: AOSP_Build_Process(P)
 categories: [AOSP,BuildSystem]
 ---
-# AAOSP_Build_Process(P)
+# AOSP_Build_Process(P)
 
 ![](p_build_process_accoss.png)
 
