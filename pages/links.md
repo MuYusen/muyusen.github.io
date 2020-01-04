@@ -3,7 +3,7 @@ layout: mypost
 title: 友情链接
 ---
 
-欢迎各位朋友与我建立友链，如需友链请到Github上提[Issue](https://github.com/MuYusen/muyusen.github.io)，我看到后会添加上的，本站的友链信息如下
+欢迎各位朋友与我建立友链，如需友链请直接发邮件给我吧，我看到后会添加上的，本站的友链信息如下
 
 ```
 名称：{{ site.title }}
