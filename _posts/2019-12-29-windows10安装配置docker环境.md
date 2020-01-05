@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: windows10 安装配置docker环境
-categories: [docker]
+categories: [Docker]
 ---
 
 # windows10 安装配置docker环境
