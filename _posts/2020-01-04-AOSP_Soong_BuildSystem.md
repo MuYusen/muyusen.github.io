@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: AOSP_Soong_BuildSystem
-categories: [AOSP,Soong,BuildSystem]
+categories: [AOSP,Soong]
 ---
 # Android Soong BuildSystem
 

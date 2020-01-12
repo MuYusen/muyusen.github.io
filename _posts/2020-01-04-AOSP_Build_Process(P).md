@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: AOSP_Build_Process(P)
-categories: [AOSP,BuildSystem]
+categories: [AOSP]
 ---
 # AOSP_Build_Process(P)
 

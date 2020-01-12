@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: 构建系统(BuildSystem)
-categories: [构建系统,BuildSystem]
+categories: [构建系统]
 ---
 
 # 构建系统(BuildSystem)
