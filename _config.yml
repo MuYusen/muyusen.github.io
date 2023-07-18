@@ -53,6 +53,9 @@ customPlugins:
   - use: false
     file: 'plugin-mathjax.html'
 
+# 显示访问量统计，由不蒜子提供服务
+extCount: false
+
 # 友情链接
 links:
   - title: 51CTO
