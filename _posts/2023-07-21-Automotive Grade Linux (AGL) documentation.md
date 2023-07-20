@@ -23,66 +23,55 @@ AGL是一个Linux基金会项目，其目标如下：
 
 ## 使用不同版本的AGL预编译镜像
 
+[参考](https://docs.automotivelinux.org/en/octopus/#01_Getting_Started/01_Quickstart/01_Using_Ready_Made_Images/)
+
 ## 从源码开始编译构建
 
 ![image-developer-workflow](image-developer-workflow.png)
 
 ### 环境准备
 
-**支持Yocto编译环境，BitBake**
+    **支持Yocto编译环境，BitBake**
 
-+ Linux 机器： [参考](https://docs.yoctoproject.org/ref-manual/system-requirements.html#supported-linux-distributions)
++ Linux 机器：[参考](https://docs.yoctoproject.org/ref-manual/system-requirements.html#supported-linux-distributions)
 + 至少100G硬盘空间
-+ 常用工具与版本：
-    + Git >= 1.8.3.1 
-    + Tar >= 1.27
-    + Python >= 3.4.0
++ 常用工具与版本：Git >= 1.8.3.1、Tar >= 1.27、Python >= 3.4.0
 
-### 代码下载 
+### 代码下载
 
 [参考](https://wiki.automotivelinux.org/agl-distro/source-code)
 
 #### 定义顶级目录
 
-```bash
-$ export AGL_TOP=$HOME/AGL
-$ echo 'export AGL_TOP=$HOME/AGL' >> $HOME/.bashrc
-$ mkdir -p $AGL_TOP
-```
+    export AGL_TOP=$HOME/AGL
+    echo 'export AGL_TOP=$HOME/AGL' >> $HOME/.bashrc
+    mkdir -p $AGL_TOP
 
 #### 配置repo
 
-```bash
-$ mkdir -p $HOME/bin
-$ export PATH=$HOME/bin:$PATH
-$ echo 'export PATH=$HOME/bin:$PATH' >> $HOME/.bashrc
-$ curl https://storage.googleapis.com/git-repo-downloads/repo > $HOME/bin/repo
-$ chmod a+x $HOME/bin/repo
-```
+    mkdir -p $HOME/bin
+    export PATH=$HOME/bin:$PATH
+    echo 'export PATH=$HOME/bin:$PATH' >> $HOME/.bashrc
+    curl https://storage.googleapis.com/git-repo-downloads/repo > $HOME/bin/repo
+    chmod a+x $HOME/bin/repo
 
 #### 源码下载
 
-```bash
-$ cd $AGL_TOP
-$ mkdir <<branch name>>
-$ cd <<branch name>>
-$ repo init -b <<branch name>> -u https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo
-$ repo sync
-
-```
+    cd $AGL_TOP
+    mkdir <<branch name>>
+    cd <<branch name>>
+    repo init -b <<branch name>> -u https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo
+    repo sync
 
 #### 代码目录结构
 
-```bash
-$ tree -L 1
- .
- ├── bsp
- ├── external
- ├── meta-agl
- ├── meta-agl-cluster-demo
- ├── meta-agl-demo
- ├── meta-agl-devel
- ├── meta-agl-extra
- └── meta-agl-telematics-demo
-```
-
+    $ tree -L 1
+    .
+    ├── bsp
+    ├── external
+    ├── meta-agl
+    ├── meta-agl-cluster-demo
+    ├── meta-agl-demo
+    ├── meta-agl-devel
+    ├── meta-agl-extra
+    └── meta-agl-telematics-demo
