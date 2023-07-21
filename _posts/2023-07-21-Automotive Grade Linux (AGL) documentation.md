@@ -8,6 +8,8 @@ categories: [Automotive,AGL]
 
 # Welcome to the Automotive Grade Linux (AGL) documentation
 
+[参考](https://docs.automotivelinux.org/en/octopus/#)
+
 ## AGL 是啥？
 
 AGL是一个开源协作项目，它将汽车制造商、供应商和技术公司聚集在一起，旨在为汽车应用程序构建基于Linux的开源软件平台，这些平台可以作为事实上的行业标准。
@@ -255,3 +257,26 @@ Example:
     In General;
     $ cd $AGL_TOP/<release-branch-name>/<build-dir>/
     $ ln -sf $AGL_TOP/site.conf conf/
+
+### 编译部署
+
+#### bitbake编译
+
+Example：agl-demo-platform
+
+    $time bitbake agl-demo-platform
+
+`$IMAGE_NAME`和路径
+
+    <build_directory>/tmp/deploy/images/qemux86-64/agl-demo-platform-qemux86-64.vmdk.xz
+
+    $export IMAGE_NAME=agl-demo-platform-qemux86-64.vmdk.xz
+
+#### 部署
+
+Example:
+
+    $ source $AGL_TOP/octopus/qemux86-64/agl-init-build-env
+
+    $ runqemu tmp/deploy/images/qemux86-64/agl-demo-platform-qemux86-64.qemuboot.conf kvm serialstdio slirp publicvnc audio
+
