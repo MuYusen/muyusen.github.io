@@ -206,3 +206,52 @@ Example:
 
 + 编译目录：默认`$AGL_TOP/<release-branch-name>/build`
 + 生成主要配置文件：`local.conf` ，`bblayers.conf`，编译目录的conf下面
+
+### 自定义编译参数
+
+修改`$AGL_TOP/<release-branch-name>/<build-dir>/conf/local.conf`文件中的编译构建参数。同Yocto项目。
+
+#### Capturing Build History
+
+    INHERIT += "buildhistory"
+    BUILDHISTORY_COMMIT = "1"
+
+#### Deleting Temporary Workspace
+
+    INHERIT += "rm_work"
+
+#### Pointing at Shared State Cache Locations
+
+[参考](https://www.yoctoproject.org/docs/3.1.4/ref-manual/ref-manual.html#shared-state-cache)
+
+    SSTATE_DIR = "${AGL_TOP}/sstate-cache"
+
+    SSTATE_MIRRORS ?= "\
+        file://.* http://someserver.tld/share/sstate/PATH;downloadfilename=PATH \n \
+        file://.* file:///some/local/dir/sstate/PATH"
+
+#### Preserving the Download Directory
+
+默认的下载路径是`downloads`.
+
+    DL_DIR = "${AGL_TOP}/downloads"
+
+#### Using a Shared State (sstate) Mirror
+
+[参考](https://yoctoproject.org/docs/3.1.4/ref-manual/ref-manual.html#shared-state-cache)
+
+    SSTATE_MIRRORS_append = " file://.* https://download.automotivelinux.org/sstate-mirror/octopus/${DEFAULTTUNE}/PATH \n "
+
+#### Common Settings using Symbolic Link with site.conf
+
+Example:
+
+    $ echo "# reuse download directories" >> $AGL_TOP/site.conf
+    $ echo "DL_DIR = \"$HOME/downloads/\"" >> $AGL_TOP/site.conf
+    $ echo "SSTATE_DIR = \"$AGL_TOP/sstate-cache/\"" >> $AGL_TOP/site.conf
+    $ cd $AGL_TOP/octopus/qemux86-64/
+    $ ln -sf $AGL_TOP/site.conf conf/
+
+    In General;
+    $ cd $AGL_TOP/<release-branch-name>/<build-dir>/
+    $ ln -sf $AGL_TOP/site.conf conf/
