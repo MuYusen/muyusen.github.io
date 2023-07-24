@@ -12,8 +12,8 @@
 </script>
 {% endif %}
 
-{%- if page.layout=="mypost" -%}
-  {%- if site.extMath -%}
+{% if page.layout=="mypost" %}
+  {% if site.extMath %}
     {% include ext-mathjax.html %}
   {% elsif page.extMath %}
     {% include ext-mathjax.html %}

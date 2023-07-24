@@ -1,14 +1,12 @@
 ---
 layout: page
 title: 搜索
-css: [common.css,page.css]
-js: [blog.js,search.js]
 ---
-<div class="page page-search animation-fade-up">
+<div class="page page-search">
 	<input id="search-input" type="text" placeholder="请在这里输入关键词^_^"></input>
 	<h1>
 		<span>搜索结果</span>
-		<img src="{{site.baseUrl}}/static/img/loading.svg">
+		<i class="svg-icon icon-loading"></i>
 	</h1>
 	<ul class="list-search">
 		{% for post in site.posts  %}
