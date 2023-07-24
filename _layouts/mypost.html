@@ -1,7 +1,7 @@
-{%- assign pageCSS = "common.css,post.css,highlight.css" -%}
-{%- assign pageCSS = pageCSS | split: "," -%}
-{%- assign pageJS = "blog.js" | split: "," -%}
-{%- assign buildAt = site.time | date: "%Y%m%d%H%M%S" -%}
+{% assign pageCSS = "common.css,post.css,highlight.css" %}
+{% assign pageCSS = pageCSS | split: "," %}
+{% assign pageJS = "blog.js" | split: "," %}
+{% assign buildAt = site.time | date: "%Y%m%d%H%M%S" %}
 <!DOCTYPE html>
 <html>
 {% include head.html %}
@@ -12,7 +12,7 @@
   {% if page.date %}
   <div class="subtitle">
     <span>{{site.author}} 于 {{ page.date | date: "%Y-%m-%d" }} 发布</span>
-    {%- if site.extCount %}
+    {% if site.extCount %}
       <span id="busuanzi_container_page_pv">本文总阅读量 <span id="busuanzi_value_page_pv"></span></span>
     {% endif %}
   </div>
@@ -21,9 +21,9 @@
     {{ content }}
   </div>
   {% if site.extAdsense %}
-  <div class="adsense" style="overflow: hidden;">
-    {% include ext-adsense.html %}
-  </div>
+    <div class="adsense" style="overflow: hidden;">
+      {% include ext-adsense.html %}
+    </div>
   {% endif %}
 </div>
 {% include footer.html %}
