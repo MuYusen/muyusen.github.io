@@ -11,19 +11,25 @@ js: [blog.js]
 		{% capture post_next_year %}{{ post.next.date | date: "%Y" }}{% endcapture %}
 
 		{% if forloop.first or post_next_year != post_year %}
-		<div class="list-post"><h2 id="{{post_year}}">{{post_year}}</h2><ul>
+		<div class="list-post"><h2 id="{{post_year}}">{{post_year}}</h2>
+		<ul>
 		{% endif %}
 
 		<li>
 			<span class="date">{{ post.date | date: "%Y/%m/%d" }}</span>
-			<a href="{{ site.baseUrl | append: post.url }}" class="title hover-underline">{{ post.title }}</a>
-			{% for categorie in post.categories %}
-			<a href="{{site.baseUrl}}/pages/categories.html#{{ categorie }}" class="category hover-underline">{{ categorie }}</a>
-			{% endfor %}
+			<div class="title">
+				<a href="{{ site.baseUrl | append: post.url }}" class="hover-underline">{{ post.title }}</a>
+			</div>
+			<div class="categories">
+				{% for categorie in post.categories %}
+				<a href="{{site.baseUrl}}/pages/categories.html#{{ categorie }}" class="hover-underline">{{ categorie }}</a>
+				{% endfor %}
+			</div>
 		</li>
 		
 		{% if forloop.last or post_previous_year != post_year %}
-		</ul></div>
+		</ul>
+		</div>
 		{% endif %}
 	{% endfor %}
 </div>
