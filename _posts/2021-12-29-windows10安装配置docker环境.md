@@ -40,7 +40,7 @@ categories: [Docker]
 
 首先打开[Docker下载页面](https://store.docker.com/editions/community/docker-ce-desktop-windows?tab=description)，然后下载Docker For Windows安装包。注意这个安装包是针对最新的Windows 10系统的，如果使用Windows 8之类的，请下载旧版本的Docker。
 
-安装之后可能会弹出这么一个对话框，提示我们说HyperV未开启，询问我们是否要开启HyperV，我们选择是，然后电脑会重启。之后一切就准备就绪了。 
+安装之后可能会弹出这么一个对话框，提示我们说HyperV未开启，询问我们是否要开启HyperV，我们选择是，然后电脑会重启。之后一切就准备就绪了。
 
 ![](832668-021f8dd5487512f6.png)
 
