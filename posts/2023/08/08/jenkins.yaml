@@ -1,0 +1,226 @@
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - usernamePassword:
+          id: "MuYuJenkins"
+          password: "{AQAAABAAAAAQ3S9qvBRe0u0kqtVtezVDsKgaQnCuaYGU9wW6GLOfmzY=}"
+          scope: GLOBAL
+          username: "MuYusen"
+jenkins:
+  agentProtocols:
+  - "JNLP4-connect"
+  - "Ping"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: true
+  disableRememberMe: false
+  disabledAdministrativeMonitors:
+  - "hudson.diagnosis.ReverseProxySetupMonitor"
+  labelAtoms:
+  - name: "master"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  numExecutors: 2
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm:
+    local:
+      allowsSignup: false
+      enableCaptcha: false
+      users:
+      - id: "zhaofusen"
+        name: "赵副森"
+        properties:
+        - "apiToken"
+        - "userCommunityProperty"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "fusen.zhao@foxmail.com"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+  slaveAgentPort: -1
+  updateCenter:
+    sites:
+    - id: "default"
+      url: "https://updates.jenkins.io/update-center.json"
+  views:
+  - all:
+      name: "all"
+  viewsTabBar: "standard"
+security:
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  sSHD:
+    port: -1
+unclassified:
+  ansiColorBuildWrapper:
+    colorMaps:
+    - black: "#000000"
+      blackB: "#4C4C4C"
+      blue: "#1E90FF"
+      blueB: "#4682B4"
+      cyan: "#00CDCD"
+      cyanB: "#00FFFF"
+      green: "#00CD00"
+      greenB: "#00FF00"
+      magenta: "#CD00CD"
+      magentaB: "#FF00FF"
+      name: "xterm"
+      red: "#CD0000"
+      redB: "#FF0000"
+      white: "#E5E5E5"
+      whiteB: "#FFFFFF"
+      yellow: "#CDCD00"
+      yellowB: "#FFFF00"
+    - black: "#000000"
+      blackB: "#555555"
+      blue: "#0000AA"
+      blueB: "#5555FF"
+      cyan: "#00AAAA"
+      cyanB: "#55FFFF"
+      defaultBackground: 0
+      defaultForeground: 7
+      green: "#00AA00"
+      greenB: "#55FF55"
+      magenta: "#AA00AA"
+      magentaB: "#FF55FF"
+      name: "vga"
+      red: "#AA0000"
+      redB: "#FF5555"
+      white: "#AAAAAA"
+      whiteB: "#FFFFFF"
+      yellow: "#AA5500"
+      yellowB: "#FFFF55"
+    - black: "black"
+      blackB: "black"
+      blue: "blue"
+      blueB: "blue"
+      cyan: "cyan"
+      cyanB: "cyan"
+      green: "green"
+      greenB: "green"
+      magenta: "magenta"
+      magentaB: "magenta"
+      name: "css"
+      red: "red"
+      redB: "red"
+      white: "white"
+      whiteB: "white"
+      yellow: "yellow"
+      yellowB: "yellow"
+    - black: "#2E3436"
+      blackB: "#2E3436"
+      blue: "#3465A4"
+      blueB: "#3465A4"
+      cyan: "#06989A"
+      cyanB: "#06989A"
+      defaultBackground: 0
+      defaultForeground: 7
+      green: "#4E9A06"
+      greenB: "#4E9A06"
+      magenta: "#75507B"
+      magentaB: "#75507B"
+      name: "gnome-terminal"
+      red: "#CC0000"
+      redB: "#CC0000"
+      white: "#D3D7CF"
+      whiteB: "#D3D7CF"
+      yellow: "#C4A000"
+      yellowB: "#C4A000"
+  bitbucketEndpointConfiguration:
+    endpoints:
+    - bitbucketCloudEndpoint:
+        enableCache: false
+        manageHooks: false
+        repositoriesCacheDuration: 0
+        teamCacheDuration: 0
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  buildStepOperation:
+    enabled: false
+  defaultFolderConfiguration:
+    healthMetrics:
+    - worstChildHealthMetric:
+        recursive: true
+  extendedEmailPublisher:
+    adminRequiredForTemplateTesting: false
+    allowUnregisteredEnabled: false
+    charset: "UTF-8"
+    debugMode: false
+    defaultBody: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:\r\n\r\nCheck\
+      \ console output at $BUILD_URL to view the results."
+    defaultContentType: "text/html"
+    defaultSubject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!"
+    defaultSuffix: "@163.com"
+    maxAttachmentSize: -1
+    maxAttachmentSizeMb: 0
+    precedenceBulk: false
+    smtpPassword: "{AQAAABAAAAAQZJDzLviz3MbLH1nl6Acv5wbUwG5PfgbeqKTN+fgDCv0=}"
+    smtpPort: "465"
+    smtpServer: "smtp.163.com"
+    smtpUsername: "zhaofs1126@163.com"
+    useSsl: true
+    watchingEnabled: false
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "http://jenkins.zhaofusen.top/github-webhook/"
+  gitSCM:
+    createAccountBasedOnEmail: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  globalLibraries:
+    libraries:
+    - defaultVersion: "master"
+      name: "jenkins-shared-library-cicd"
+      retriever:
+        modernSCM:
+          scm:
+            git:
+              credentialsId: "MuYuJenkins"
+              id: "d6ff230e-1d77-4546-bf82-2afd094a1c6a"
+              remote: "https://github.com/MuYusen/jenkins-shared-library-cicd.git"
+              traits:
+              - "gitBranchDiscovery"
+  location:
+    adminAddress: "没有配置邮箱地址 <nobody@nowhere>"
+    url: "http://jenkins.zhaofusen.top/"
+  mailer:
+    authentication:
+      password: "{AQAAABAAAAAQzBDm/G+e4OWFIEr25q07EVkLTmr81DOMaonWQOnO+Bc=}"
+      username: "zhaofs1126@163.com"
+    charset: "UTF-8"
+    defaultSuffix: "@163.com"
+    smtpHost: "smtp.163.com"
+    smtpPort: "465"
+    useSsl: true
+    useTls: false
+  pollSCM:
+    pollingThreadCount: 10
+  timestamperConfig:
+    allPipelines: false
+    elapsedTimeFormat: "'<b>'HH:mm:ss.S'</b> '"
+    systemTimeFormat: "'<b>'HH:mm:ss'</b> '"
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
