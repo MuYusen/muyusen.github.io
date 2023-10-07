@@ -40,3 +40,17 @@ httpd: httpd.c
 clean:
         rm httpd
 ```
+
+`编译完成之后运行 echo $? , 返回 0 ，编译成功。`
+
+### 运行
+
+```bash
+10169 ◯ : ./httpd                                                                                                                                                                                              [~]
+httpd running on port 59253
+
+```
+
+浏览器打开：http://localhost:59253/ , 如下显示，`成功`.
+
+![tinyhttpd](2023-10-07_14-56.png)
