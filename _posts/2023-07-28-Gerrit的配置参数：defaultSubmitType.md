@@ -4,8 +4,6 @@ title: Gerrit的配置参数：defaultSubmitType
 categories: [Gerrit]
 ---
 
-# Gerrit的配置参数：defaultSubmitType
-
 **repository.\<name\>.defaultSubmitType**
 
 写在前面：
