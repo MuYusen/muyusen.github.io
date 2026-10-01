@@ -24,7 +24,7 @@ mdurl==0.1.2
 multi-key-dict==2.0.3
 namex==0.0.7
 numpy==1.26.2
-oauthlib==3.2.2
+oauthlib==4.0.0
 opt-einsum==3.3.0
 packaging==23.2
 pbr==6.0.0
